@@ -1,0 +1,345 @@
+li,ul,span{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #fcff04;
+}
+body{
+	padding:0;
+	margin:0 auto;
+	width:1920px;
+	font:16px '黑体';
+}
+.control{
+	margin:0 auto;
+	border:1px solid;
+	background: url('images/bg_img.jpg') no-repeat;
+}
+.header{
+	background:url('images/header.jpg') no-repeat 0 1px;
+	height:120px;
+}
+.menu{
+	background:url('images/menu.png') no-repeat 0 -5px;
+	height: 30px;
+}
+.body{
+	height:7030px;
+}
+.header_biaoti{
+	height:120px;
+	width: 280px;
+	float:left;
+	text-align:center;
+}
+.logo{
+	background:url('1') no-repeat;
+	margin-left: 400px;
+}
+.ge_li_xian{
+	height:100px;
+	width:1px; 
+	float:right;
+	background:-webkit-linear-gradient(#a1d6e7,#153d49,#a1d6e7);
+	background:-moz-linear-gradient(#a1d6e7,#153d49,#a1d6e7);
+	background:linear-gradient(#a1d6e7,#153d49,#a1d6e7);
+	margin-top:10px;
+}
+.dian_pu_ming{
+	display: inline-block;
+	margin-top: 30px ;
+	color:#08338f;
+	font:30px '微软雅黑';
+	font-weight:bold;
+}
+.dian_pu_biao_yu{
+	display:inline-block;
+	margin-left:20px;
+	color:#ef5364;
+	font: 17px 'KaiTi';
+}
+.chanping_name_ul li:nth-child(1) a:nth-child(1){
+	color:#e20001;
+	margin: 15px auto 7px;
+	width: 100px;
+	height: 25px;
+	border-radius:6px;
+	background-color:yellow;
+	display:block;
+	font:17px '黑体';
+	line-height:25px;
+}
+.chanping_name_ul li:nth-child(2) a:nth-child(1){
+	color:#204697;
+	font:14px '黑体';
+	font-weight:500;
+}
+.chanping_name_ul .price{
+	color:#e20001;
+	font:20px '微软雅黑';
+	font-weight:900;
+}
+.chanping_name_ul .price span{
+	color:#e20001;
+	font:36px '黑体';
+	font-weight:900;
+}
+.menu_control{
+	text-align:center;
+}
+.menu_ul{
+	display:inline-block;
+	margin-top:5px;
+}
+.menu .menu_ul li{
+	float:left;
+	color:#fcff04;
+	font:18px '黑体';
+
+}
+.menu .menu_ul li:nth-child(1){
+	display: inline-block;
+	margin: -21px 20px 0 3px;
+}
+.body_control{
+	margin:0 auto;
+	width: 1920px;
+}
+.body_left{
+	float: left;
+	width:715px;
+	height: 356px;
+	background:url('images/bing_kuai.png') no-repeat;
+	margin-top:40px
+}
+.body_left div{
+	float:left;
+	width:485px;
+	height: 380px;
+	background:url('images/wei_bo_lu.png') no-repeat;
+	margin:-136px 0px 0px 99px;
+}
+.body_right{
+	float: left;
+	height:540px;
+	width: 530px;
+	text-align:center;
+}
+.body_right ul li{
+	display: inline-block;
+	margin-top:21px;
+}
+.body_right ul li:nth-child(1) span{
+	font:38px '微软雅黑';
+	font-weight: 500;
+	width:272px;
+	height: 64px;
+	color:#0064ff;
+	background:url('images/ban_jia.png') no-repeat -10px 0px;
+	border-radius:5px 5px 19px 19px;
+	display: inline-block;
+}
+.body_right ul li:nth-child(2){
+	font:54px '微软雅黑';
+	font-weight: 600;
+	width:502px;
+	height: 78px;
+	color:#fff;
+	background:url('images/xian.png') no-repeat;
+}
+.body_right ul li:nth-child(3){
+	font-size:22px;
+	color:#fff;
+}
+.body_right ul li:nth-child(4){
+	line-height: 135px;
+	color:#f1f61a;
+	font-size:18px;
+	color:#fff;
+	width:360px;
+	height:170px;
+	background:url('images/bo_dong.png') no-repeat;
+}
+.body_right ul li:nth-child(4) span{
+	color:yellow;
+}
+.body_right ul li:nth-child(4) span:nth-child(1){
+	float: left;
+	margin-left:18px;
+}
+.body_right ul li:nth-child(4) span:nth-child(2){
+	float: right;
+}
+.body_right ul li:nth-child(5){
+	background-color:#0064ff;
+	width: 373px;
+	height:68px;
+	font-size:14px;
+	color:#fff;
+	line-height: 108px;
+}
+.body_right ul li:nth-child(5) span{
+	display: inline-block;
+}
+.body_right ul li:nth-child(5) .jia_ge{
+	font:50px '微软雅黑';
+}
+.body_right ul li:nth-child(5) .jia_ge b{
+	font:20px '微软雅黑';
+}
+.body_right ul li:nth-child(5) .jia_ge_xiao_shu{
+	width: 25px;
+	line-height: 18px;
+	font-size: 20px;
+}
+.body_right ul li:nth-child(5) .jia_ge_xiao_shu span{
+	font-size: 28px;
+}
+.body_right ul li:nth-child(5) .jia_ge_xiao_shu span:nth-child(1){
+	font-family:'微软雅黑';
+	font-weight:700;
+}
+.body_right ul li:nth-child(5) .left_div{
+	float: left;
+	margin-left:10px; 
+}
+.body_right ul li:nth-child(5) .btn{
+	margin-left:25px;
+	width: 117px;
+	height: 46px;
+	background:url('images/btn_img.png') no-repeat;
+}
+.body_A{
+	height:966px;
+}
+.body_B{
+	height:336px;
+	background:url('images/B.png') no-repeat;
+}
+.body_B_control_center{
+	overflow:hidden;
+	width: 900px;
+}
+.body_B_control_center div{
+	float: left;
+	margin-top:80px;
+	margin-left: 147px;
+}
+.body_B_control_center div:nth-child(1){
+	margin-left: 44px;
+}
+.body_C{
+	height:540px;
+	width: 1613px;
+}
+.body_C_control{
+	margin-left: 85px;
+}
+.body_D{
+	height:514px;
+	width: 1613px;
+	padding-top:70px;
+}
+.body_D_control{
+	margin-left: 336px;
+}
+.body_E{
+	height:652px;
+	width:1613px;
+	padding-top:140px;
+}
+.body_E_control{
+	margin-left: 85px;
+}
+.body_F{
+	height:200px;
+}
+.body_F div{
+	margin-top:-131px;
+	float: right;
+}
+.produce{
+	float:left;
+	margin: 20px;
+	text-align: center;
+}
+.produce .produce_pic{
+	background-color:#fff;
+	width:480px;
+	height:480px;
+	border-radius:5px 5px 5px 5px;
+	box-shadow:5px 5px 13px #00388f;
+}
+.produce .produce_pic .tia_mao_logo{
+	width: 150px;
+	height:50px;
+	background:url('images/tia_ma_logo.png') no-repeat;
+	margin-left: 20px;
+}
+.produce .produce_pic .chan_pin{
+	padding:20px;
+	width: 440px;
+	height: 440px;
+	background:url('images/wei_bo_lu.png') no-repeat;
+	overflow: hidden;
+}
+.produce div:nth-child(2){
+	margin-top:22px;
+	color:#0973d1;
+	font:26px '黑体';
+}
+.produce div:nth-child(3){
+	margin:17px auto 0;
+	font:36px '微软雅黑';
+	font-weight: 400;
+	width:420px;
+	height: 67px;
+	color:#fff;
+	background:url('images/xian2.png') no-repeat -40px -8px;
+}
+.produce div:nth-child(4){
+	color:#fff;
+	font-size: 18px;
+}
+.produce div:nth-child(4) div{
+	display: inline-block;
+}
+.produce div:nth-child(4) span{
+	color:yellow;
+	font-size: 43px;
+}
+.produce div:nth-child(4) span:nth-child(1){
+	font-size: 26px;
+}
+.produce .btn2{
+	display: inline-block;
+	width: 175px;
+	height: 53px;
+	background: url(images/btn_img2.png) no-repeat 0px 3px;
+}
+.body_G{
+	height:1580px;
+	width:1050px;
+	padding-top: 70px;
+}
+.body_H{
+	height:200px;
+}
+.body_H div{
+	margin-top:-111px;
+	float: right;
+}
+.body_I{
+	overflow: hidden;
+	width: 1560px;
+}
+.body_I_control{
+	-webkit-transform:scale(0.66,0.66);
+	-moz-transform:scale(0.66,0.66);
+	transform:scale(0.66,0.66);
+}
