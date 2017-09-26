@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>俄罗斯方块</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<style type="text/css">
+		table,td{
+			border-collapse: collapse;
+			border:1px solid aqua;
+		}
+		table,td,tr{
+			margin:0 auto;
+			padding:0;
+			-ms-user-select:none;
+			-moz-user-select:none;
+			-webkit-user-select:none;
+
+		}
+		table{
+			/*width:500px;
+			height: 500px;*/
+		}
+		td{
+			width: 50px;
+			height: 50px;
+			margin:0;
+			padding:0;
+			background-color:red;
+			color: red;
+			text-align: center;
+			font-size: 36px;
+		}
+		.td_color{
+			background-color: aqua;
+		}
+		.boom_btn{
+			color:red;
+			background-color:red;
+			height:50px;
+			width: 50px;
+			border:none;
+			text-align: center;
+			text-decoration:none;
+			display: inline-block;
+			float:left;
+		}
+		.boom_btn2{
+			background-color:black;
+		}
+
+	</style>
+</head>
+<body>
+	<table class="table_eq">
+	<tr class="tr">
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+	</tr>
+	<tr class="tr">
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+	</tr>
+	<tr class="tr">
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+	</tr>
+	<tr class="tr">
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+	<tr class="tr">
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+			<td class="td">0</td>
+	</tr>	
+	</table>
+	<button  class="btn1" style="margin-left:500px">开始</button>
+	<button class="btn2" onclick="f5();">重来</button>
+</body>
+<script type="text/javascript">
+
+/*
+* 使用二维数组生成界面
+ */
+//  var myarr=new Array();
+//  for(var i=0;i<5;i++){
+//  	myarr[i]=new Array();
+//  	for(var j=0;j<5;j++){
+//  		myarr[i][j]="";
+//  	}
+//  }
+//   myarr[0][0]='<div class="jie_mian"></div>';
+// /*随机生成雷btn*/
+// function boom(){
+// 	if($(this).children().text()=="蕾姆的"){
+// 		//$(".tr .td").children().addClass("boom_btn2");
+// 	console.log("全炸");
+// 	}
+// }
+
+/*重新加载本页面*/
+function f5(){
+	window.location.replace("./Jquery扫雷游戏.html");
+}
+$(document).ready(function(){
+
+	function random_boom(){
+		var Arr=[];
+		 for(var i=0;i<5;i++){
+		 	var randomNumber=Math.floor(Math.random()*20);                            
+		 		Arr.push(randomNumber);
+		 } 	
+		// console.log(Arr);
+		var td_btn=document.getElementsByClassName("td");
+
+		
+		 for(var j=0;j<Arr.length;j++){
+		 	 		td_btn[Arr[j]].innerHTML='<button class="boom_btn">蕾姆啊</button>';
+		 	 		var a=$(td_btn[Arr[j]]).parent().index();
+		 	 		var b=$(td_btn[Arr[j]]).index();
+		 	 		var find_tr=$(".table_eq").find(".tr");
+		 	 		/*判断有几个雷有几个雷就显示数字几*/
+
+		 	 	   var a_add_1=a+1;
+		 	 	   var a_sub_1=a-1
+		 	 	   var b_add_1=b+1;
+		 	 	   var b_sub_1=b-1;
+		 	 	// if($(td_btn[Arr[3]]).find("button")==null){
+		 	 	// 	console.log("空的");
+		 	 	// }
+		 	 	// else{
+		 	 	// 	console.log("有html");
+		 	 	// }
+		 	 	// if($(td_btn[Arr[j]]).children().html()=="蕾姆啊"){
+		 	 	// 	di_lei++;
+		 	 	// }
+		 	 	//parseInt(find_tr.has(".td").eq(0).children().eq(0).text())+1
+		 	 	   //第一个格子
+		 	 	   if((a_sub_1>=0&&a_sub_1<=4)&&(b_sub_1>=0&&b_sub_1<=4)){
+		 	 	   		var grid_1=find_tr.eq(a_sub_1).find(".td").eq(b_sub_1);
+		 	 	   	//	grid_1.addClass("td_color");
+					 	 	if(grid_1.children().text()!="蕾姆啊"){
+					 	 		grid_1.text(parseInt(grid_1.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第二个格子
+		 	 	   if((a_sub_1>=0&&a_sub_1<=4)&&(b>=0&&b<=4)){
+
+		 	 	   		var grid_2=find_tr.eq(a_sub_1).find(".td").eq(b);
+		 	 	   		//	grid_2.addClass("td_color");
+		 	 	   			if(grid_2.children().text()!="蕾姆啊"){
+					 	 		grid_2.text(parseInt(grid_2.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第三个格子
+		 	 	     if((a_sub_1>=0&&a_sub_1<=4)&&(b_add_1>=0&&b_add_1<=4)){
+
+		 	 	   		var grid_3=find_tr.eq(a_sub_1).find(".td").eq(b_add_1);
+		 	 	   	//		grid_3.addClass("td_color");
+		 	 	   			if(grid_3.children().text()!="蕾姆啊"){
+					 	 		grid_3.text(parseInt(grid_3.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第四个格子
+		 	 	    if((a>=0&&a<=4)&&(b_sub_1>=0&&b_sub_1<=4)){
+		 	 	   		
+		 	 	   		var grid_4=find_tr.eq(a).find(".td").eq( b_sub_1);
+		 	 	   		//	grid_4.addClass("td_color");
+		 	 	   			if(grid_4.children().text()!="蕾姆啊"){
+					 	 		grid_4.text(parseInt(grid_4.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第五个格子
+		 	 	   find_tr.eq(a).find(".td").eq(b).addClass("td_color");
+		 	 	   //第六个格子
+		 	 	    if((a>=0&&a<=4)&&(b_add_1>=0&&b_add_1<=4)){
+		 	 	   		
+		 	 	   		var grid_6=find_tr.eq(a).find(".td").eq(b_add_1);
+		 	 	   		//	grid_6.addClass("td_color");
+		 	 	   			if(grid_6.children().text()!="蕾姆啊"){
+					 	 		grid_6.text(parseInt(grid_6.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第七个格子
+		 	 	    if((a_add_1>=0&&a_add_1<=4)&&(b_sub_1>=0&&b_sub_1<=4)){
+		 	 	   		
+		 	 	   		var grid_7=find_tr.eq(a_add_1).find(".td").eq(b_sub_1);
+		 	 	   		//	grid_7.addClass("td_color");
+		 	 	   			if(grid_7.children().text()!="蕾姆啊"){
+					 	 		grid_7.text(parseInt(grid_7.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第八个格子
+		 	 	    if((a_add_1>=0&&a_add_1<=4)&&(b>=0&&b<=4)){
+		 	 	   		
+		 	 	   		var grid_8=find_tr.eq(a_add_1).find(".td").eq(b);
+		 	 	   		//	grid_8.addClass("td_color");
+		 	 	   			if(grid_8.children().text()!="蕾姆啊"){
+					 	 		grid_8.text(parseInt(grid_8.text())+1);
+					 	 	}
+		 	 	   }
+		 	 	   //第九个格子
+		 	 	    if((a_add_1>=0&&a_add_1<=4)&&(b_add_1>=0&&b_add_1<=4)){
+		 	 	   		
+		 	 	   		var grid_9=find_tr.eq(a_add_1).find(".td").eq(b_add_1);
+		 	 	   		//	grid_9.addClass("td_color");
+		 	 	   			if(grid_9.children().text()!="蕾姆啊"){
+					 	 		grid_9.text(parseInt(grid_9.text())+1);
+					 	 	}
+		 	 	   }
+
+
+				 		// find_tr.eq(a_sub_1).find(".td").eq( b_sub_1).addClass("td_color");
+				 	 // 	find_tr.eq(a_sub_1).find(".td").eq(b).addClass("td_color");
+				 	 // 	find_tr.eq(a_sub_1).find(".td").eq(b_add_1).addClass("td_color");
+				 	 // 	find_tr.eq(a).find(".td").eq( b_sub_1).addClass("td_color");
+				 	 // 	find_tr.eq(a).find(".td").eq(b).addClass("td_color");
+				 	 // 	find_tr.eq(a).find(".td").eq(b_add_1).addClass("td_color");
+				 	 // 	find_tr.eq(a_add_1).find(".td").eq( b_sub_1).addClass("td_color");
+				 	 // 	find_tr.eq(a_add_1).find(".td").eq(b).addClass("td_color");
+				 	 // 	find_tr.eq(a_add_1).find(".td").eq(b_add_1).addClass("td_color");
+
+		 	}
+		 	
+}			var a=0;
+					$(".tr .td").click(function(){
+
+						//$(this).addClass(.td_color);
+						if(a==0){
+								alert("请点击开始");
+						}else{
+							if($(this).text()!="蕾姆啊"){
+								$(this).addClass("td_color");
+								if(parseInt($(".tr>.td_color").size())==25){
+									alert("你获得了一个蕾姆！");
+								}
+				
+							}
+							else{
+								$(".tr button").addClass("boom_btn2");
+								alert("蕾姆碎片被你点碎了");
+							}
+						}
+
+					});
+			$(".btn1").click(function(){
+				a=1;
+				random_boom();
+			});
+		 
+});
+</script>
+</html>
