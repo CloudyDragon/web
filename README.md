@@ -1,6 +1,5 @@
 ﻿
 # LearnEnglish项目后台接口文档
-<!-- TOC -->autoauto- [LearnEnglish项目后台接口文档](#learnenglish项目后台接口文档)auto				- [状态码code 说明](#状态码code-说明)auto- [单词列表-1.0.0](#单词列表-100)auto				- [URL-1.0.0](#url-100)auto				- [GET请求-1.0.0](#get请求-100)auto				- [POST请求-1.0.0](#post请求-100)auto				- [PUT请求-1.0.0](#put请求-100)auto				- [DELETE请求-1.0.0](#delete请求-100)auto				- [Get计数加一请求-1.0.0](#get计数加一请求-100)auto- [第几章管理列表-1.0.1](#第几章管理列表-101)auto				- [URL-1.0.1](#url-101)auto				- [GET请求-1.0.1](#get请求-101)auto				- [POST请求-1.0.1](#post请求-101)auto				- [PUT请求-1.0.1](#put请求-101)auto				- [DELETE请求-1.0.1](#delete请求-101)autoauto<!-- /TOC -->
 
 ##### 状态码code 说明
 code| 说明
