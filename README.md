@@ -21,7 +21,7 @@ page_index| false | Number | 不传默认为1
 page_size | false | Number | 不传默认为100
 xue_sort  | false | Number | 请求第几章的 默认为全部
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '',
@@ -65,7 +65,7 @@ xue_translate_other  | false | String | 不传默认为 ''
 
 
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '添加成功！',
@@ -96,7 +96,7 @@ xue_translate_interj  | false | String | 不传默认为 ''
 xue_translate_vi  | false | String | 不传默认为 ''
 xue_translate_vt  | false | String | 不传默认为 ''
 xue_translate_other  | false | String | 不传默认为 ''
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '添加成功！',
@@ -112,7 +112,7 @@ xue_translate_other  | false | String | 不传默认为 ''
 xue_id| true | Number | 单词的xue_id
 
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '删除成功！',
@@ -129,7 +129,7 @@ xue_id| true | Number | 单词的xue_id
 xue_id| true | Number | 单词的xue_id
 
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '计数加一成功！',
@@ -154,7 +154,7 @@ xue_id| true | Number | 单词的xue_id
 page_index| false | Number | 不传默认为1
 page_size | false | Number | 不传默认为100
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '',
@@ -178,7 +178,7 @@ page_size | false | Number | 不传默认为100
 xue_chapter_str | true | String |  无
 
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '添加成功！',
@@ -194,7 +194,7 @@ xue_chapter_str | true | String |  无
 id         | true   | Number | 无
 xue_chapter_str     | false  | String | 无
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '添加成功！',
@@ -210,7 +210,7 @@ xue_chapter_str     | false  | String | 无
 id | true | Number | 无
 
 
->>> 请求响应示例：
+> 请求响应示例：
 ``` javascript
 {
 	msg: '删除成功！',
