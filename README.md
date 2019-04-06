@@ -190,7 +190,7 @@ xue_chapter_str | true | String |  无
 
 参数名|必选|类型|说明
 ----|:----|:----:|:-----
-id         | true   | Number | 无
+xue_chapter_id         | true   | Number | 无
 xue_chapter_str     | false  | String | 无
 
 > 请求响应示例：
